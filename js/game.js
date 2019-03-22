@@ -39,9 +39,7 @@ window.onload = function init() {
             break;
     }
 
-    for(let i = 0; i < 3; i++){
-        document.body.removeChild(document.body.firstChild);
-    }
+    document.body.innerHTML = "";
 
     settedInterval = setInterval(setTarget, interval);
 };
