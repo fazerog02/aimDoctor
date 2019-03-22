@@ -3,6 +3,7 @@ let intervalStr;
 let interval;
 let targetSize;
 let settedInterval;
+let targetSpace = document.getElementById("targetSpace");
 
 var clickCounter = 0;
 
@@ -39,8 +40,6 @@ window.onload = function init() {
             break;
     }
 
-    document.body.innerHTML = "";
-
     settedInterval = setInterval(setTarget, interval);
 };
 
@@ -74,12 +73,12 @@ function setTarget(){
     object.onclick = function (){
         clickCounter++;
     };
-    document.body.appendChild(object);
+    targetSpace.appendChild(object);
 
     counter++;
 }
 
 
 function deleteTarget(){
-    document.body.removeChild(document.body.firstChild);
+    targetSpace.removeChild(targetSpace.firstChild);
 }
