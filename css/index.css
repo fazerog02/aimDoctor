@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/*------serviceTitle Start---------*/
+
+#serviceTitle{
+    position: relative;
+    top: 20vh;
+}
+
+
+#serviceTitleText{
+    font-size: 650%;
+    font-family: "URW Gothic";
+    color: black;
+    animation: serviceTitleTextAnimation 2500ms ease 100ms;
+}
+
+@keyframes serviceTitleTextAnimation{
+    0%{ opacity: 0; }
+    100%{ opacity: 100% }
+}
+
+
+#serviceTitleBorder{
+    position: relative;
+    left: 15vw;
+    height: 3px;
+    width: 0;
+    background-color: black;
+    animation: serviceTitleBorderAnimation 2500ms ease 100ms forwards;
+}
+
+@keyframes serviceTitleBorderAnimation{
+    0%{ width: 0; }
+    100%{ width: 70vw }
+}
+
+/*---------serviceTitle End------------*/
+
+
+
+/*-----------form Start----------------*/
+
+form{
+    position: relative;
+    top: 45vh;
+}
+
+
+#interval{
+    border: 1px solid black;
+    margin: 20px;
+}
+
+#interval:focus{
+    border-color: springgreen;
+}
+
+#interval:valid{
+    background-color: white;
+}
+
+
+#targetSize{
+    padding: 3px;
+    margin: 20px;
+    font-family: "URW Gothic";
+    background-color: white;
+    border: 1px solid black;
+}
+
+#targetSize:focus{
+    outline: 0;
+}
+
+
+#submit{
+    position: relative;
+    left: calc(50vw - 125px);
+    display: block;
+    padding: 15px 30px 10px 30px;
+    margin: 50px;
+    font-size: 150%;
+    font-family: "URW Gothic";
+    border-radius: 5%;
+    background-color: white;
+    border: 2px solid black;
+    transition: all 500ms ease 0s;
+    transform-origin: right top;
+}
+
+#submit:hover{
+    background-color: black;
+    color: white;
+}
+
+#submit:focus{
+    outline: 0;
+}
+
+
+label{
+    font-size: 125%;
+    font-family: "URW Gothic";
+}
+
+/*-----------form End-------------------*/

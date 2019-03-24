@@ -40,7 +40,22 @@ window.onload = function init() {
             break;
     }
 
-    settedInterval = setInterval(setTarget, interval);
+    let readyInterval = setInterval(readyCount, 1000);
+
+    let readyCounter = 3;
+    function readyCount(){
+        let space = document.getElementById("readySpace");
+        if(readyCounter === 0){
+            space.innerText = "GO!";
+        } else if(readyCounter < 0){
+            space.innerText = "";
+            clearInterval(readyInterval);
+            settedInterval = setInterval(setTarget, interval);
+        } else {
+            space.innerText = readyCounter;
+        }
+        readyCounter--;
+    }
 };
 
 function randNum(){
@@ -56,9 +71,15 @@ function setTarget(){
     if(counter >= 1) deleteTarget();
     if(counter >= 100){
         clearInterval(settedInterval);
-        let result = document.createElement("p");
-        result.innerText = clickCounter.toString() + '%';
-        document.body.appendChild(result);
+
+        let resultHtml =
+            "YOUR RESULT" +
+            "<br>" +
+            `<div id=\"result\">${clickCounter}%</div>` +
+            "<div id='exitButton'><a href='/aimDoctor'>EXIT</a></div>";
+        let resultSpace = document.getElementById("resultSpace");
+        resultSpace.innerHTML = resultHtml;
+
         return;
     }
     let object = document.createElement("div");
