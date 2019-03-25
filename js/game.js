@@ -76,7 +76,7 @@ function setTarget(){
             "YOUR RESULT" +
             "<br>" +
             `<div id=\"result\">${clickCounter}%</div>` +
-            "<div id='exitButton'><a href='/aimDoctor'>EXIT</a></div>";
+            "<div id='exitButton'><a href='/aimDoctor'><span>EXIT</span></a></div>";
         let resultSpace = document.getElementById("resultSpace");
         resultSpace.innerHTML = resultHtml;
 

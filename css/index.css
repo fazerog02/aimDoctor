@@ -4,6 +4,11 @@ body{
 }
 
 
+@font-face{
+    font-family: "URW Gothic";
+    src: url("../font/urw_gothic_l_book.ttf");
+}
+
 
 /*------serviceTitle Start---------*/
 
