@@ -73,7 +73,7 @@ function setTarget(){
         clearInterval(settedInterval);
 
         let resultHtml =
-            "YOUR RESULT" +
+            "YOUR SCORE" +
             "<br>" +
             `<div id=\"result\">${clickCounter}%</div>` +
             "<div id='exitButton'><a href='/aimDoctor'><span>EXIT</span></a></div>";
