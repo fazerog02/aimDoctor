@@ -69,13 +69,13 @@ function randNum(){
 let counter = 0;
 function setTarget(){
     if(counter >= 1) deleteTarget();
-    if(counter >= 100){
+    if(counter >= 20){
         clearInterval(settedInterval);
 
         let resultHtml =
             "YOUR SCORE" +
             "<br>" +
-            `<div id=\"result\">${clickCounter}%</div>` +
+            `<div id=\"result\">${clickCounter*5}%</div>` +
             "<div id='exitButton'><a href='/aimDoctor'><span>EXIT</span></a></div>";
         let resultSpace = document.getElementById("resultSpace");
         resultSpace.innerHTML = resultHtml;
