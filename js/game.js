@@ -83,6 +83,7 @@ function setTarget(){
         return;
     }
     let object = document.createElement("div");
+    let objectAlreadyClicked = false;
     object.id = "target";
     object.style.position = "absolute";
     object.style.backgroundColor = "black";
@@ -92,7 +93,11 @@ function setTarget(){
     object.style.left = randNum().toString() + "vw";
     object.style.top = randNum().toString() + "vh";
     object.onclick = function (){
-        clickCounter++;
+        if(!objectAlreadyClicked){
+            clickCounter++;
+            this.style.opacity = "0";
+            objectAlreadyClicked = true;
+        }
     };
     targetSpace.appendChild(object);
 
