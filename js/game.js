@@ -95,7 +95,7 @@ function setTarget(){
     object.onclick = function (){
         if(!objectAlreadyClicked){
             clickCounter++;
-            this.style.opacity = "0";
+            this.style.backgroundColor = "red";
             objectAlreadyClicked = true;
         }
     };
